@@ -1,6 +1,8 @@
 include:
   - board: xiao_ble//zmk
     shield: totem_left
+    cmake-args: -DCONFIG_ZMK_POINTING=y
   - board: xiao_ble//zmk
     shield: totem_right
+    cmake-args: -DCONFIG_ZMK_POINTING=y
 # there is no settingsreset (needed) for the XIAO
