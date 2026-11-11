@@ -56,7 +56,7 @@
         };
         combo_lctrl {
             timeout-ms = <40>;
-            key-positions = <21 22>;    /* Z + X */
+            key-positions = <27 28>;    /* M + , */
             bindings = <&kp LCTRL>;
             layers = <BASE>;
         };
