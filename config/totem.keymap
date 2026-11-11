@@ -62,6 +62,16 @@
         };
     };
 
+    /* Camada 3 liga sozinha quando as camadas 1 e 2 estao ativas ao mesmo tempo
+       (segurar os dois espacos, em qualquer ordem). */
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NUM NAV>;
+            then-layer = <MOUSE>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -84,7 +94,7 @@
                 &kp N1    &kp N2  &kp N3  &kp N4     &kp N5        &kp N7  &kp N8  &kp N9   &kp N0    &trans
                 &trans    &trans  &trans  &kp GRAVE  &kp LALT      &kp N4  &kp N5  &kp N6   &trans    &trans
     &trans      &trans    &trans  &trans  &trans     &kp LSHFT     &kp N1  &kp N2  &kp N3   &trans    &trans    &trans
-                          &trans  &trans  &trans                   &trans  &mo MOUSE  &kp N0
+                          &trans  &trans  &trans                   &trans  &trans  &kp N0
             >;
         };
 
@@ -95,7 +105,7 @@
                 &kp F11   &kp ESC  &trans      &trans       &trans        &kp MINUS  &kp EQUAL  &kp LEFT  &kp RIGHT  &trans
                 &kp CAPS  &kp RBKT &kp BSLH    &kp BSLH     &trans        &kp PG_UP  &kp LBKT   &trans    &kp HOME    &kp SQT
     &trans      &trans    &trans   &trans      &trans       &trans        &kp PG_DN  &kp LALT   &kp DEL   &kp END     &trans    &trans
-                          &trans   &mo MOUSE   &trans                     &trans     &trans     &trans
+                          &trans   &trans   &trans                     &trans     &trans     &trans
             >;
         };
 
