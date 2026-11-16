@@ -116,9 +116,17 @@
             bindings = <
                 &bt BT_SEL 0  &kp PSCRN &kp UP    &none      &none     &msc SCRL_UP    &mkp MB1         &mmv MOVE_UP    &mkp MB2          &out OUT_TOG
                 &bt BT_SEL 1  &kp LEFT  &kp DOWN  &kp RIGHT  &none     &msc SCRL_DOWN  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &sys_reset
-    &bt BT_SEL 4  &bt BT_SEL 2  &bt BT_SEL 3  &kp F11   &kp F12    &none     &trans          &msc SCRL_LEFT   &trans          &msc SCRL_RIGHT   &bt BT_CLR  &bootloader
+    &bt BT_SEL 4  &bt BT_SEL 2  &bt BT_SEL 3  &kp F11   &kp F12    &studio_unlock     &trans          &msc SCRL_LEFT   &trans          &msc SCRL_RIGHT   &bt BT_CLR  &bootloader
                           &trans    &trans    &trans                   &trans          &trans           &trans
             >;
+        };
+
+        /* Camadas vazias reservadas: o ZMK Studio permite usa-las para criar camadas novas */
+        extra_layer_1 {
+            status = "reserved";
+        };
+        extra_layer_2 {
+            status = "reserved";
         };
     };
 };
