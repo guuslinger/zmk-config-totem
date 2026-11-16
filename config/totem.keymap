@@ -79,6 +79,16 @@
             bindings = <&kp LC(V)>;
             key-positions = <23 24>;
         };
+
+        acentuacao_e {
+            bindings = <&kp LBKT>;
+            key-positions = <16 17>;
+        };
+
+        acentuacao_a {
+            bindings = <&kp SQT>;
+            key-positions = <17 18>;
+        };
     };
 
     /* Camada 3 liga sozinha quando as camadas 1 e 2 estao ativas ao mesmo tempo
